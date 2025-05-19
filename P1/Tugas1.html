@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Mahasiswa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        table td {
+            padding: 8px;
+        }
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+        input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .checkbox-group label {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="#">
+        <h1>Form Mahasiswa</h1>
+        <h2>Data Mahasiswa</h2>
+
+        <table>
+            <tr>
+                <td><label for="nama">Nama</label></td>
+                <td>:</td>
+                <td><input type="text" id="nama" name="nama" required></td>
+            </tr>
+            <tr>
+                <td><label for="nim">NIM</label></td>
+                <td>:</td>
+                <td><input type="text" id="nim" name="nim" required></td>
+            </tr>
+            <tr>
+                <td><label for="kelas">Kelas</label></td>
+                <td>:</td>
+                <td>
+                    <select id="kelas" name="kelas" required>
+                        <option value="">--Pilih Kelas--</option>
+                        <option value="kelas A">Kelas A</option>
+                        <option value="kelas B">Kelas B</option>
+                        <option value="kelas C">Kelas C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="jenisKelamin">Jenis Kelamin</label></td>
+                <td>:</td>
+                <td>
+                    <input type="radio" id="pria" name="jenisKelamin" value="pria" required>
+                    <label for="pria">Pria</label>
+                    <input type="radio" id="wanita" name="jenisKelamin" value="wanita" required>
+                    <label for="wanita">Wanita</label>
+                </td>
+            </tr>
+        </table>
+
+        <h2>Tempat Tinggal Mahasiswa</h2>
+
+        <table>
+            <tr>
+                <td><label for="alamat">Alamat</label></td>
+                <td>:</td>
+                <td><textarea id="alamat" name="alamat" required></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="kecamatan">Kecamatan</label></td>
+                <td>:</td>
+                <td><input type="text" id="kecamatan" name="kecamatan" required></td>
+            </tr>
+            <tr>
+                <td><label for="kabupaten">Kabupaten</label></td>
+                <td>:</td>
+                <td><input type="text" id="kabupaten" name="kabupaten" required></td>
+            </tr>
+            <tr>
+                <td><label for="provinsi">Provinsi</label></td>
+                <td>:</td>
+                <td><input type="text" id="provinsi" name="provinsi" required></td>
+            </tr>
+            <tr>
+                <td><label for="kodePos">Kode Pos</label></td>
+                <td>:</td>
+                <td><input type="text" id="kodePos" name="kodePos" required></td>
+            </tr>
+        </table>
+
+        <h2>Lain-lain</h2>
+        <table>
+            <tr>
+                <td><label for="BahasaPemerograman">Bahasa Pemrograman</label></td>
+                <td>:</td>
+                <td>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" id="C/C++" name="BahasaPemerograman" value="C/C++"> C/C++</label>
+                        <label><input type="checkbox" id="GoLang" name="BahasaPemerograman" value="GoLang"> Go Lang</label>
+                        <label><input type="checkbox" id="Python" name="BahasaPemerograman" value="Python"> Python</label>
+                        <label><input type="checkbox" id="Java" name="BahasaPemerograman" value="Java"> Java</label>
+                        <label><input type="checkbox" id="PHP" name="BahasaPemerograman" value="PHP"> PHP</label>
+                        <label><input type="checkbox" id="JS" name="BahasaPemerograman" value="Javascript"> Javascript</label>
+                        <label><input type="checkbox" id="Ruby" name="BahasaPemerograman" value="Ruby"> Ruby</label>
+                        <label><input type="checkbox" id="lain" name="BahasaPemerograman" value="Lainnya"> Lainnya</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="kegiatan">Kegiatan</label></td>
+                <td>:</td>
+                <td>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" id="organisasi" name="kegiatan" value="kemahasiswaan"> Organisasi Kemahasiswaan</label>
+                        <label><input type="checkbox" id="olahraga" name="kegiatan" value="olahraga"> Olahraga</label>
+                        <label><input type="checkbox" id="external" name="kegiatan" value="external"> Organisasi External</label>
+                        <label><input type="checkbox" id="seni" name="kegiatan" value="seni"> Bidang Seni</label>
+                        <label><input type="checkbox" id="Lainnya" name="kegiatan" value="Lainnya"> Lainnya</label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Cancel">
+        </div>
+    </form>
+</body>
+</html>

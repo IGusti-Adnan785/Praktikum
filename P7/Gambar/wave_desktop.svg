@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="60px" viewBox="0 0 1440 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>wave/wave_desktop</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="footer/desktop" fill="#3D2360">
+            <g id="Group" transform="translate(0.000000, -0.000000)">
+                <path d="M1440,321.479828 C1363,305.479828 1267.32208,291.886071 993,291.886071 C753.433441,291.886071 619.276147,337.479828 447,337.479828 C274.723853,337.479828 104.661557,336.479828 0,291.886071 L0,0 L1440,0 L1440,321.479828 Z" id="Path" transform="translate(720.000000, 168.739914) scale(-1, -1) translate(-720.000000, -168.739914) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

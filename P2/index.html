@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to top, #54ffda, #7474ff);
+        color: #333;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 50px;
+        color: #000000;
+    }
+
+    p {
+        text-align: center;
+        font-size: 18px;
+        color: #555;
+    }
+
+    #KembaliKeAtas {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        opacity: 0.7;
+        background: radial-gradient(circle, #ffad14, #ff5858);
+        color: rgb(0, 0, 0);
+        border: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: opacity 0.3s, transform 0.3s;
+    }
+
+    #KembaliKeAtas:hover {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    div {
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 3</title>
+</head>
+<body>
+    <div style="height: 2500px; padding: 20px;">
+        <h1>Welcome to ADNAN CAPITALE</h1>
+        <p>Scroll kebawah untuk memunculkan tombol</p>
+    </div>
+
+    <button id="KembaliKeAtas">↑</button>
+
+    <script>
+        const backToTopButton = document.getElementById('KembaliKeAtas');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('mouseover', () => {
+            backToTopButton.style.opacity = '1';
+        });
+
+        backToTopButton.addEventListener('mouseout', () => {
+            backToTopButton.style.opacity = '0.5';
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

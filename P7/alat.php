@@ -547,7 +547,7 @@
       <div class="sidebar">
         <h3>Produktivitas</h3>
         <ul>
-          <li><a href="alat.php">Alat</a></li>
+          <li><a href="#">Alat</a></li>
           <li><a href="#">Alur Kerja & Perencanaan</a></li>
           <li><a href="#">Developer Tools</a></li>
           <li><a href="#">Komunikasi</a></li>
@@ -570,36 +570,11 @@
       </div>
       <div class="content-area">
         <h2>Ekstensi</h2>
-        <div class="banner">
-          <div>
-            <h3>Favorit pada tahun 2024</h3>
-            <p>Temukan ekstensi terbaik yang membuat tahun ini berwarna</p>
-            <button>Lihat koleksi</button>
-          </div>
-          <img src="Gambar/bander.jpg" alt="Banner" />
-        </div>
+        
 
         <h2>I Gusti Adnan, mungkin Anda suka</h2>
 
-        <section>
-          <div class="recommendations">
-            <?php
-                require_once("admin/model/Koneksi.php");
-                $koneksi = new Koneksi();
-                $extensions = $koneksi->select('extensions'); foreach ($extensions as $row):
-            ?>
-            <button class="card">
-              <img src="<?= $row['image'] ?>" alt="<?= $row['name'] ?>" />
-              <div class="card-title"><?= $row['name'] ?></div>
-              <div class="card-rating">
-                <?= $row['rating'] ?>
-                ★
-              </div>
-              <p><?= $row['description'] ?></p>
-            </button>
-            <?php endforeach; ?>
-          </div>
-        </section>
+        
       </div>
     </div>
 

@@ -237,8 +237,6 @@
         border-radius: 10px;
         padding: 10px;
         cursor: pointer;
-        margin: auto;
-        border: none;
       }
 
       .card img {
@@ -279,8 +277,6 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 40px 20px;
-        display: inline-block;
-        text-align: left;
       }
 
       .footer-top {
@@ -298,10 +294,6 @@
         font-size: 14px;
         line-height: 1.6;
         margin-bottom: 12px;
-      }
-
-      .footer-top .container{
-        padding-left: 30px;
       }
 
       .read-more {
@@ -404,7 +396,7 @@
         display: none;
         position: absolute;
         top: calc(100% + 10px); 
-        left: -180px;
+        left: 0;
         background: white;
         min-width: 200px;
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -547,7 +539,7 @@
       <div class="sidebar">
         <h3>Produktivitas</h3>
         <ul>
-          <li><a href="alat.php">Alat</a></li>
+          <li><a href="#">Alat</a></li>
           <li><a href="#">Alur Kerja & Perencanaan</a></li>
           <li><a href="#">Developer Tools</a></li>
           <li><a href="#">Komunikasi</a></li>

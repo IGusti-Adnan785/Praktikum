@@ -12,27 +12,21 @@ class Auth extends Koneksi{
     }
     
     public function login($email, $password) {
-    $stmt = $this->conn->prepare("SELECT * FROM auth WHERE email = ?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
+        $sql = "SELECT *FROM auth WHERE email='".$email."'";
+        $query = $this->conn->query($sql);
 
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        if (password_verify($password, $row['password'])) {
-            if ($row['level'] == 0) {
+        if( $query->num_rows > 0) {
+            $row = $query->fetch_array();
+            if (password_verify($password, $row['password'])) {
                 $_SESSION['id_pengguna'] = $row['id_pengguna'];
-                return true; 
+                return $row['id_pengguna'];
             } else {
-                return false; 
+                return false;
             }
         } else {
-            return false; 
+            return false;
         }
-    } else {
-        return false; 
     }
-}
 }
 
 $auth = new Auth();
